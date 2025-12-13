@@ -135,14 +135,14 @@ def confront_evelyn(path):
     path["clues"].add("dress_stain_almond")
     slow_print("Under pressure she admits Victor hinted at a divorce and had been distant.")
     slow_print("\nChoices:")
-    slow_print("1. Press Evelyn for motive and timeline\n 2.Let Evelyn go and investigate elsewhere")
+    slow_print("1. Press Evelyn for motive and timeline\n. 2.Let Evelyn go and investigate elsewhere")
     choice = input("Choose a number from 1-2: ")
     if choice == "1":
         slow_print("Evelyn says she was in her room at midnight but admits she left the house earlier that night to walk the grounds; she returned and discovered Victor.")
         path["clues"].add("evelyn_alibi_weak")
     elif choice== "2":
         slow_print("You decide not to press Evelyn further for now.")
-        arrival
+        arrival(path)
     else:
         slow_print("Invalid choice.")
         confront_evelyn(path)
